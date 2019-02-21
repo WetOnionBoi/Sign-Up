@@ -33,10 +33,17 @@ tickets = [
 
 #index page
 @route("/")
-@view("Index")
+@view("index")
 def index():
     #need this function to attach the decorators above.
     pass
+
+#CheckIn
+@route("/check-in")
+@view("check-in")
+def check_in():
+    data = dict (ticket_list = tickets)
+    return data
 
 
 #bottom of code
