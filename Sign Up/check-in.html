@@ -13,8 +13,16 @@
 				<h4><b>{{ticket.name}}</b></h4> 
 				<p>{{ticket.email}}</p> 
 				<p>{{ticket.dob}}</p>
-				<p>{{ticket.check_in}}</p>
 				<img src="https://www.phocuswire.com/uploadedImages/News/Distribution/trivago-results-2017.jpg?origwidth=800&origheight=400&origmode=crop&Anchor=MiddleCenter&width=600&height=300&scale=both&mode=crop" alt="Avatar" style="width:20%">
+				%if ticket.check_in == True:
+					<a onclick="M.toast({html: 'I am Checked In'})" class="btn">Checked In!</a>
+				%else:
+					<p> <a href = "/check-in-success/{{ticket.id}}"> Not Checked In </a> <p>
+					
+				<div class="progress">
+				<div class="indeterminate"></div>
+				</div>
+				
 				</div>
 				</div>
             
