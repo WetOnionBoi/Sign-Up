@@ -57,22 +57,6 @@ def check_in_success(ticket_id):
     data = dict (ticket = found_ticket)
     found_ticket.check_in = True
     return data
-
-@route('/sign-up')
-@view('sign-up')
-def sign_up():
-    pass
         
-@route('/sign-up-success', method = 'POST')
-@view('sign-up-success')
-def sign_up_success():
-    name = request.forms.get('name')
-    date_of_birth = request.forms.get('date_of_birth')
-    email = request.forms.get('email')
-    
-    new_ticket = Ticket(name, email, date_of_birth, False)
-    tickets.append(new_ticket)
-    
-
 #bottom of code
 run(host='0.0.0.0', port = 8080, reloader=True, debug=True)

@@ -1,0 +1,23 @@
+	% include('Shared/navbar.html')
+	% include('Shared/header.html')
+
+	  <div class="row">
+    <form class="col s12" action = '/sign-up-success' method = 'post'>
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Dohn Joe" id="inp_name" name="name" type="text" class="validate">
+          <label for="first_name">name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="inp_dob" type="text" name="date_of_birth" class="validate">
+          <label for="date_of_birth">dd.mm.yyyy</label>
+        </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="inp_email" type="email" name = "email" class="validate">
+          <label for="email">email</label>
+        </div>
+      </div>
+	   <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
